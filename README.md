@@ -7,6 +7,7 @@ This project is an example of how DOM can be manipulated through the use of Java
 * [Project Title](#landing-page-project)
 * [Getting Started](#getting-started)
 * [Development](#development)
+* [Helping Resources](#helping-resources)
 * [Credits](#credits)
 
 ## Getting Started
@@ -21,6 +22,13 @@ Index.html file is where all the changes are visually reflected. To see the code
 * A section that is in the viewport is highlighted by a different color and animation.
 * Current section in the navigation bar is highlighted in green. Link on hoover is in black.
 * scrolling down the page causes the navBar to disappear and scrolling back up brings it back.
+
+### Helping Resources
+
+* Maryna Dymovich project - https://github.com/MarynaDymovich/Dynamic-Navigation-Menu
+* FWD online community - https://nfpdiscussions.udacity.com
+* README file - https://www.markdownguide.org/basic-syntax
+
 
 ### Credits
 
