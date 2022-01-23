@@ -28,7 +28,7 @@ function NavBar (){
    }
    const navBarList = document.getElementById("navbar__list"); 
    navBarList.appendChild(frag); // add the fragment to navbar__list in html
-};
+}
 
 
 // Add class 'active' to section when near top of viewport
@@ -60,7 +60,7 @@ function ActiveSection (){
             }
         })
     });
-};
+}
 
 
 // Scroll to section on navBar click
@@ -120,4 +120,4 @@ function hideNav(){
             lastScrollTop = scrollTop;
       }); 
     }
-  }; 
+  }
