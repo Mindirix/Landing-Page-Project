@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+* [Project Title](#landingpageproject)
 * [Instructions](#instructions)
 
 ## Instructions
