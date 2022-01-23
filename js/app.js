@@ -34,7 +34,7 @@ function NavBar (){
 // Add class 'active' to section when near top of viewport
 function ActiveSection (){
     // add event listener for scrolling
-    window.addEventListener('scroll', function(){ 
+    window.addEventListener('scroll', () => { 
         const links = document.querySelectorAll("a.menu__link"); 
         const sections = document.querySelectorAll('section'); 
         //loop through sections
@@ -106,7 +106,7 @@ function hideNav(){
     // if condition to check page scroll
     if(autoHide){
       let lastScrollTop ;
-      window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', () => {
             let scrollTop = window.scrollY;
             // if condition to add or remove style
            if(scrollTop < lastScrollTop) {
