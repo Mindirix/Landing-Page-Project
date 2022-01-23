@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- meta data -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,13 +19,10 @@
   <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
   <header class="page__header">
-
-    <!-- Added hamburger menu -->
-    
-    
     <nav class="navbar__menu">
       <!-- Navigation starts as empty UL that will be populated with JS -->
       <ul id="navbar__list"></ul>
+      <!-- Added hamburger menu -->
       <button class="button">
         <div class="div_button"></div>
         <div class="div_button"></div>
@@ -36,7 +34,7 @@
     <header class="main__hero">
       <h1>Amazing Science Facts</h1>
     </header>
-    
+    <!-- Body Sections -->
     <section id="section1" data-nav="Fact 1" class="your-active-class">
       <div class="landing__container">
         <h2>20% of Earth’s oxygen is produced by the Amazon rainforest</h2>
@@ -73,6 +71,6 @@
     <p>&copy Udacity</p>
   </footer>
   <!-- Added JS -->
-<script src="js/app.js" type="text/javascript"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

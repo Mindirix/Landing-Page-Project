@@ -4,30 +4,31 @@ document.addEventListener('DOMContentLoaded', ActiveSection, false);
 document.addEventListener('DOMContentLoaded', scroll, false);
 document.addEventListener('DOMContentLoaded', menu, false); 
 
-/**
- * 
- * Begin Main Functions
- * 
-*/
 
 // build the navigationBar
 function NavBar (){
-    const sections = document.querySelectorAll('section'); //retrieve all section tag
-    const frag = document.createDocumentFragment(); //create a fragment for performance
+    //retrieve all section tag
+    const sections = document.querySelectorAll('section'); 
+    //create a fragment for performance
+    const frag = document.createDocumentFragment(); 
     //loop through the section tag
    for (const sec of sections){
-       const listItem = document.createElement("li"); // create a li element
-       const anchor = document.createElement("a"); // create an anchor element
-       anchor.textContent = sec.dataset.nav; // add text to the anchor
-       anchor.classList.add("menu__link"); // add a class to the anchor
-       listItem.appendChild(anchor); // add the anchor to the list element
-       frag.appendChild(listItem); // add the list to the fragment
+       // create a li element
+       const listItem = document.createElement("li"); 
+       const anchor = document.createElement("a"); 
+       // add text to the anchor
+       anchor.textContent = sec.dataset.nav; 
+       // add a class to the anchor
+       anchor.classList.add("menu__link"); 
+       // add the anchor to the list element
+       listItem.appendChild(anchor); 
+       // add the list to the fragment
+       frag.appendChild(listItem); 
    }
    const navBarList = document.getElementById("navbar__list"); 
    navBarList.appendChild(frag); // add the fragment to navbar__list in html
 };
 
-/////////////////////////
 
 // Add class 'active' to section when near top of viewport
 function ActiveSection (){
@@ -60,14 +61,16 @@ function ActiveSection (){
     });
 };
 
-////////////////////////////
 
 // Scroll to section on navBar click
 function scroll(){
     const navBar = document.getElementById('navbar__list');
-    navBar.addEventListener('click', (eve) =>{
-        eve.preventDefault();
-        const selectedSection = document.querySelector(`[data-nav="${eve.target.textContent}"]`)
+    // add event listener
+    navBar.addEventListener('click', (eve) =>{ 
+        // stop the default action
+        eve.preventDefault(); 
+        // retrieve the selected navBar item
+        const selectedSection = document.querySelector(`[data-nav="${eve.target.textContent}"]`) 
         // const selectedSection = document.getElementById(eve.target.getAttribute("href").subString(1))
         selectedSection.scrollIntoView({
             behavior : "smooth",
@@ -76,7 +79,6 @@ function scroll(){
     })   
     }
 
-///////////////////////////
 
 // Hamburger Menu
 function menu (){
