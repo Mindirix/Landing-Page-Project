@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', NavBar, false);
 document.addEventListener('DOMContentLoaded', ActiveSection, false);
 document.addEventListener('DOMContentLoaded', scroll, false);
 document.addEventListener('DOMContentLoaded', menu, false); 
+document.addEventListener('DOMContentLoaded', hideNav, false); 
 
 
 // build the navigationBar
@@ -95,3 +96,28 @@ function menu (){
 })
 }
 
+
+// auto hide navBar when Scrolling
+function hideNav(){
+  // select page header to hide
+  const  autoHide = document.querySelector('.page__header');
+  const  navbar_height = document.querySelector('.page__header').offsetHeight;
+    document.body.style.paddingTop = navbar_height + 'px';
+    // if condition to check page scroll
+    if(autoHide){
+      let lastScrollTop ;
+      window.addEventListener('scroll', function() {
+            let scrollTop = window.scrollY;
+            // if condition to add or remove style
+           if(scrollTop < lastScrollTop) {
+                autoHide.classList.remove('scrolled-down');
+                autoHide.classList.add('scrolled-up');
+            }
+            else {
+                autoHide.classList.remove('scrolled-up');
+                autoHide.classList.add('scrolled-down');
+            }
+            lastScrollTop = scrollTop;
+      }); 
+    }
+  }; 
