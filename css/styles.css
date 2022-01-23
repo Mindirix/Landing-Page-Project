@@ -12,7 +12,7 @@
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    background: linear-gradient(0deg, rgba(154 205  50) 0%, rgb(0, 110, 255) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -33,6 +33,7 @@ h1 {
     }
 }
 
+@media only screen and (min-width: 600px){
 h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
@@ -40,6 +41,7 @@ h2 {
     color: #fff;
 }
 
+}
 p {
     line-height: 1.6em;
     color: #eee;
@@ -126,8 +128,27 @@ section {
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right; 
+    text-align: left; 
 }
+
+/* Hamburger Menu */
+
+@media screen and (min-width : 600px){
+.button{
+    display: none;
+    position: relative;
+    top: 50px ;
+    float: left;
+    
+}
+}
+div.div_button{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
 
 /* Background Circles */
 /* Note that background circles are created with psuedo elements before and after */

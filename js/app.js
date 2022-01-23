@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', NavBar, false); 
 document.addEventListener('DOMContentLoaded', ActiveSection, false);
 document.addEventListener('DOMContentLoaded', scroll, false);
-//document.addEventListener('DOMContentLoaded', SmallMenu, false); 
+document.addEventListener('DOMContentLoaded', menu, false); 
 
 /**
  * 
@@ -77,4 +77,19 @@ function scroll(){
     }
 
 ///////////////////////////
+
+// Hamburger Menu
+function menu (){
+    const button = document.querySelector('.button');
+    button.addEventListener('click', () => {
+        const select = document.querySelectorAll('.menu__link');
+        select.forEach(i =>{
+            if (i.style.display === 'none'){
+                i.style.display = 'block';
+            } else {
+                i.style.display = 'none';
+            }
+        })
+})
+}
 
