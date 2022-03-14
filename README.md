@@ -34,4 +34,4 @@ Index.html file is where all the changes are visually reflected. To see the code
 
 Ahmed Moussa
 
-Original template is provided by Udacity.
+Udacity.
